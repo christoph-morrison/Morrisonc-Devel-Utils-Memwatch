@@ -23,8 +23,6 @@ my $conf = q(
 # ... passed as a reference to init()
 Log::Log4perl::init( \$conf );
 
-# -------------------- non-core modules
-
 sub print_log {
     my $log_message = shift;
     my $perl_logger = Log::Log4perl->get_logger(q{memwatch});
@@ -33,6 +31,8 @@ sub print_log {
     main::Log3(q{memwatch}, 1, $log_message) if $fhem_logger;
     $perl_logger->info($log_message) if $perl_logger;
 }
+
+# -------------------- main
 
 sub new {
     my ($type, $id) = @_;
