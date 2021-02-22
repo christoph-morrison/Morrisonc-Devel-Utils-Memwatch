@@ -1,0 +1,10 @@
+-I lib
+-r
+-v
+-c
+-f
+-t
+-w
+--timer
+--formatter TAP::Formatter::Console
+-j1
