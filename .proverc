@@ -1,6 +1,6 @@
 -I lib
 -r
--v
+-v -v
 -c
 -f
 -t
